@@ -12,7 +12,7 @@ def home(request):
     paginator = Paginator(blog_list, 3)
     page = request.GET.get('page')
     posts = paginator.get_page(page)
-    return render(request, 'home.html', {'blogs':blogs, 'posts':posts} )
+    return render(request, 'home.html', {'blogs':blogs, 'posts':posts} ) 
 
 # Create your views here.
 

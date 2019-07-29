@@ -1,0 +1,44 @@
+{% extends  'base.html' %}
+
+{% block contents %}
+<head>
+    
+    <style type="text/css">
+
+    body { color:#FFFFFF; }
+
+    </style>
+   
+
+</head>
+
+
+<div class="container">
+    <br>
+    <br>
+    <br>
+    <h1>Login</h1>
+
+    <form method = "POST" action="{%url 'login'%}">
+        {%csrf_token%}
+        Username:
+        <br>
+        <input name="username" type="text" value="">
+        <br>
+        Password:
+        <br>
+        <input name="password" type="password" value="">
+        <br>
+        <br>
+        <input class="btn btn-primary" type="submit" value="Login">
+
+
+
+
+    </form>
+
+
+
+</div>
+
+{%endblock%}

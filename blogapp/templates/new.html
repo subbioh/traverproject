@@ -1,0 +1,39 @@
+{% extends  'base.html' %}
+
+
+{% block contents %}
+<head>
+    
+        <style type="text/css">
+    
+        body { color:#FFFFFF; }
+    
+        </style>
+       
+    
+    </head>
+
+<body>
+<br>
+        
+    
+
+<div class="container">
+    <form method="POST">
+    {% csrf_token %}
+    <br><br>
+    <h1>새 글 입력하기</h1>
+    <br>
+    <table>
+        {{form.as_table}}
+    </table>
+    <br>
+        <input class="btn btn-dark" type="submit" value="제출하기">
+
+    </form>
+    
+      
+</div>
+
+</body>
+{%endblock%}
